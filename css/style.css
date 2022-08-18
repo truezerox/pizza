@@ -1,0 +1,57 @@
+/*!
+ * Made by Johan Steijvers
+ * Copyright 2022-2022 Angels and demons Design.
+ * Licensed under opensource
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
+/*all styles for the body*/
+body {
+
+    padding: 0px;
+    margin: 0px;
+    font-family: "poppins", sans-serif;
+}
+
+/*all styles for in the header tag*/
+header {
+ 
+
+}
+
+/*the navigation logo styles*/
+.navbar-brand img {
+    width: 100%;
+
+
+}
+
+/*Distance between the logo and menu items*/
+.ml-left {
+    margin-left: 50px;
+}
+
+/*Hamburger menu */
+.navbar-toggler-icon .icon-bar {
+
+    background-color: black;
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    margin: 5px;
+}
+
+/**/
+
+
+
+
+
+
+
+button:focus{
+    outline: none;
+    border-color: transparent;
+}
