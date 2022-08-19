@@ -15,10 +15,7 @@ body {
 }
 
 /*all styles for in the header tag*/
-/* header {
- 
-
-} */
+header {}
 
 /*the navigation logo styles*/
 .navbar-brand img {
@@ -39,19 +36,228 @@ body {
     display: block;
     width: 22px;
     height: 2px;
-    border-radius: 1px;
+    border-radius: 2px;
     margin: 5px;
+
 }
 
-/**/
+/*menu text style*/
 
+.navbar-nav li a {
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 250;
+    font-size: 16px;
+    font-family: "poppins", sans-serif;
+}
 
+/*Social media buttons style*/
+.social-icons-header li a i {
 
+    font-size: 15px;
+    color: #333;
+    background-color: #fff;
+    padding: 9px 9px;
+    border-radius: 50%;
+    margin-right: 0px;
+    width: 36px;
+    height: 36px;
+    text-align: center;
 
+}
 
+.social-icons-header {
+    position: flex;
+    right: 25px;
+    padding-top: 26px;
+    padding-left: 26px;
+    top: 26px;
+    transform-style: all ease 1s;
 
+}
 
-button:focus{
+/*burger menu */
+button:focus {
     outline: none;
     border-color: transparent;
+}
+
+/*styling of tekst and images*/
+
+/*Title tekst styling*/
+.banner-inner h2 {
+
+    color: #150025;
+    margin-top: 270px;
+    margin-bottom: -170px;
+
+}
+
+/*P tag styling of the main tekst */
+.banner-inner p {
+
+    font-weight: 400;
+    margin-bottom: 48px;
+    margin-top: 200px;
+
+
+}
+
+/*style of the buttons of the main tekst*/
+a.btn-seemore {
+
+    padding: 15px 50px;
+    border-radius: 20rem;
+    color: #fff;
+    background-color: #dc3545;
+    text-decoration: none;
+    transition: all ease 1s;
+    text-align: center;
+    z-index: 99;
+}
+
+/*behavior of the button main tekst*/
+a.btn-seemore:hover {
+    background: #dc3545;
+    border-radius: 0px;
+}
+
+/*background images*/
+
+.wrap {
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+}
+
+/*background image self*/
+.wrap .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: url(/img/bg.png) no-repeat center center;
+    background-size: cover;
+    transform: scale(1.1);
+
+}
+
+/*box class*/
+.box-main-wrapper {
+
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+/*left image style*/
+.box img {
+
+    width: 600px;
+    position: absolute;
+    transition: all ease 2s;
+
+}
+
+
+
+
+
+/*background left*/
+.bgcolor-1 {
+
+    background: #eca60859;
+    position: absolute;
+    width: 55%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    overflow: hidden;
+    transition: all ease 2s;
+}
+
+/*background left hover effect*/
+
+.bgcolor-1:hover {
+
+    width: 65%;
+
+}
+
+/*blur effect left bg picture*/
+.bgcolor-1.blur {
+
+    width: 45%;
+}
+
+.bgcolor-1:hover .box img.left {
+    right: 54px;
+}
+
+
+.bgcolor-1.blur .box img.left {
+    margin-right: -377px;
+    right: 0px;
+}
+
+/*position and movement of the left background image*/
+.box img.left {
+
+    margin-right: -300px;
+    bottom: -72px;
+    right: 0px;
+
+}
+
+/*background right*/
+
+/*position and movement of the right background image*/
+.box img.right {
+
+    margin-left: -220px;
+    bottom: -72px;
+    left: -82px;
+
+}
+
+.bgcolor-2 {
+    background: #8e8e8e59;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 45%;
+    overflow: hidden;
+    transition: all ease 2s;
+}
+
+/*blur effect bg picture right*/
+
+.bgcolor-2.blur {
+    width: 35%;
+
+}
+
+.bgcolor-2:hover {
+    width: 55%;
+}
+
+.bgcolor-2.blur .box img.right {
+
+    margin-left: -357px;
+    left: 0px;
+}
+
+.bgcolor-2:hover .box img.right {
+    margin-left: -220px;
+    left: -9px;
 }

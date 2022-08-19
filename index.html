@@ -6,10 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Bootstrap style-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--Jquery script CDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <!--Google Fonts Script-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+
+    <!--Bootstrap minimal script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <!--Private bootstrap minimal script added for color design and padding etc-->
     <link href="/css/bmin.css" rel="stylesheet">
+
     <!--hand maded Stylesheet-->
     <link href="/css/style.css" rel="stylesheet">
 
@@ -93,18 +106,130 @@
         </div>
     </header>
 
+    <!--Tekst for header tags-->
+    <div class="container">
+
+        <div class="row">
+            <!--Tekst left side-->
+            <div class="col-sm-4">
+                <div class="banner-inner">
+                    <!--title-->
+                    <h2>The finest ingredients for beter taste</h2>
+                    <!--Tekst-->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quisquam, a illum natus earum,
+                        iste sequi libero cumque, necessitatibus ipsam dignissimos possimus obcaecati similique iusto?
+                        Distinctio eius at itaque suscipit!</p>
+                    <!--Button-->
+                    <a href="#" class="btn-seemore">See more</a>
+                </div>
+
+            </div>
+
+
+            <div class="col-sm-4"> </div>
+
+
+            <!--Tekst right side-->
+            <div class="col-sm-4">
+                <div class="banner-inner">
+                    <!--title-->
+                    <h2>The finest ingredients for beter money</h2>
+                    <!--Tekst-->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quisquam, a illum natus earum,
+                        iste sequi libero cumque, necessitatibus ipsam dignissimos possimus obcaecati similique iusto?
+                        Distinctio eius at itaque suscipit!</p>
+                    <!--Button-->
+                    <a href="#" class="btn-seemore">See more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--background image-->
+    <div class="wrap">
+        <div class="bg">
+
+        </div>
+    </div>
+
+
+
+    <!--background image leftside-->
+    <div class="box-main-wrapper">
+
+        <div id="1b" class="bgcolor-1">
+            <div class="box">
+                <img class="left" src="/img/pizza.png" alt="background image">
+            </div>
+        </div>
+    </div>
+
+    <!--background image rightside-->
+    <div id="2b" class="bgcolor-2">
+        <div class="box">
+            <img src="/img/pizza-right.png" alt="background image right" class="right">
+        </div>
+    </div>
 
 
 
 
-
-
-
-
+    <!--jscripts-->
     <script src="https://kit.fontawesome.com/4da71396e1.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
+    <script>
+
+   var lFollowX = 0,
+    lFollowY = 0,
+    x = 0,
+    y = 0,
+    friction = 1 / 30;
+
+function moveBackground() {
+  x += (lFollowX - x) * friction;
+  y += (lFollowY - y) * friction;
+  
+  translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+  $('.bg').css({
+    '-webit-transform': translate,
+    '-moz-transform': translate,
+    'transform': translate
+  });
+
+  window.requestAnimationFrame(moveBackground);
+}
+
+$(window).on('mousemove click', function(e) {
+
+  var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+  var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+  lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+  lFollowY = (10 * lMouseY) / 100;
+
+});
+
+moveBackground();
+
+
+$(document).ready(function() {
+	$('#1b').hover(function() {
+		$('#2b').addClass('blur');
+	}, function() {
+		$('#2b').removeClass('blur');
+	});
+	
+	$('#2b').hover(function() {
+		$('#1b').addClass('blur');
+	}, function() {
+		$('#1b').removeClass('blur');
+	});
+});
+
+
+    </script>
 </body>
 
 </html>
